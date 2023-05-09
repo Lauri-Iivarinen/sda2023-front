@@ -6,13 +6,13 @@ export default function Homepage() {
     const navigation = useNavigate()
 
     const navigate = () => {
-        navigation('/greet')
+        navigation('/journeys')
     }
     
     return (
         <div style={{textAlign: 'center'}}>
             <p>Homepage</p>
-            <button onClick={navigate}>Greetings</button>
+            <button onClick={navigate}>Journeys</button>
         </div>
     )
 }

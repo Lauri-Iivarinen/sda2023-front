@@ -6,6 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Homepage from './components/Homepage';
+import ListJourneys from './components/ListJourneys';
 
 const router = createBrowserRouter([
   {
@@ -14,8 +15,8 @@ const router = createBrowserRouter([
     
   },
   {
-    path: "greet",
-    element:<div>Greetings traveler.</div>
+    path: "journeys",
+    element:<ListJourneys></ListJourneys>
   }
 ]);
 
