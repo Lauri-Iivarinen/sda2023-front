@@ -7,7 +7,7 @@ export default function ListJourneys() {
 
     const [journeys, setJourneys] = useState<Trip[]>([])
     const [page, setPage] = useState<number>(0)
-    const [rowsPerPage, setRowsPerPage] = React.useState(10);
+    const [rowsPerPage, setRowsPerPage] = useState(10);
     const [partJourney, setPartJourney] = useState<Trip[]>([])
 
     const fetchJourneys = async () => {
@@ -63,7 +63,7 @@ export default function ListJourneys() {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                            {partJourney.map((journey, index) => (<TableRow key={index}>
+                            {partJourney.map((journey, index) => (<TableRow key={index} sx={{backgroundColor: index%2===0 ? 'white': 'rgb(220,220,220)'}}>
                                 <TableCell>({journey.Departure_station_id}) {journey.Departure_station_name}</TableCell>
                                 <TableCell>{journey.Departure}</TableCell>
                                 <TableCell>{(journey.Covered_distance / 1000).toFixed(1)}</TableCell>
@@ -85,8 +85,3 @@ export default function ListJourneys() {
         </Paper>
     )
 }
-
-/**
- * 
-            
- */

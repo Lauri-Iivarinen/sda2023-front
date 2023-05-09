@@ -8,11 +8,14 @@ export default function Homepage() {
     const navigate = () => {
         navigation('/journeys')
     }
+
+    const navigateStations = () => navigation('/stations')
     
     return (
         <div style={{textAlign: 'center'}}>
             <p>Homepage</p>
             <button onClick={navigate}>Journeys</button>
+            <button onClick={navigateStations}>Stations</button>
         </div>
     )
 }
